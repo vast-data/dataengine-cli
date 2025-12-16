@@ -1,6 +1,6 @@
 # VAST DataEngine CLI
 
-Version: v5.5.0-1.0.0
+Version: v5.5.0-1.0.1
 
 > Command-line interface for managing and building applications on the VAST DataEngine platform.
 
@@ -20,21 +20,45 @@ Welcome to the VAST DataEngine CLI! This is your doorway to building and managin
 
 ## Installation
 
-### Using cURL
+Download the `vastde` binary for your platform from the [releases page][releases], or use the instructions below.
 
-You need the `vastde` binary for your platform. These can be found on the [releases page][releases].
-
-The script below will automatically detect your OS and architecture:
+### macOS (Apple Silicon)
 
 ```bash
-OS=$(uname -s | tr A-Z a-z)
-ARCH=$(uname -m | sed 's/x86_64/amd64/' | sed 's/aarch64/arm64/')
-curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-1.0.0/vastde_${OS}_${ARCH}
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-1.0.1/vastde_darwin_arm64
 chmod +x vastde
 sudo mv vastde /usr/local/bin
 ```
 
-Verify the installation:
+### macOS (Intel)
+
+```bash
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-1.0.1/vastde_darwin_amd64
+chmod +x vastde
+sudo mv vastde /usr/local/bin
+```
+
+### Linux (x86_64)
+
+```bash
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-1.0.1/vastde_linux_amd64
+chmod +x vastde
+sudo mv vastde /usr/local/bin
+```
+
+### Linux (ARM64)
+
+```bash
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-1.0.1/vastde_linux_arm64
+chmod +x vastde
+sudo mv vastde /usr/local/bin
+```
+
+### Windows (x86_64)
+
+Download [vastde_windows_amd64.exe](https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-1.0.1/vastde_windows_amd64.exe) and add it to your PATH.
+
+### Verify Installation
 
 ```bash
 vastde version
