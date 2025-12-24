@@ -12,7 +12,7 @@ Create a VAST DataEngine trigger
 Create a VAST DataEngine trigger
 
 ```
-vastde triggers create [flags]
+vastde triggers create [command] [flags]
 ```
 
 ## Examples
@@ -66,6 +66,11 @@ vastde triggers create [flags]
     --source-bucket test-bucket \
     --dry-run
 ```
+
+## Subcommands
+
+- [element](vastde_triggers_create_element.md) - Create a new element trigger
+- [schedule](vastde_triggers_create_schedule.md) - Create a new schedule trigger
 
 ## Options
 

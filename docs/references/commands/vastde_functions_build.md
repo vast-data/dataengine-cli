@@ -48,7 +48,7 @@ You can manually clear the cache using --clear-cache if you encounter issues.
 
 After building, you can:
 - Test locally using 'functions localrun'
-- Push to a container registry
+- Push to a container registry (if --push was not set)
 - Deploy to DataEngine using 'functions create'
 
 ```
@@ -86,6 +86,9 @@ vastde functions build <name> [flags]
     --target ./ml-service \
     --image-tag production-v2.0.0 \
     --version 3.12.*
+	
+	# Build and push the image to the container registry
+  vastde functions build my-registry/my-function --image-tag v1.0.0 --push
 ```
 
 ## Options
@@ -98,6 +101,7 @@ vastde functions build <name> [flags]
 | `-H`, `--handlers` | string | Handler file name | `main.py` |
 | `-T`, `--image-tag` | string | Image tag to apply | `latest` |
 | `-P`, `--pull-policy` | string | Builder image pull policy (never|always|ifnotpresent) | `ifnotpresent` |
+| `--push` | bool | Push the built image to the container registry |  |
 | `-t`, `--target` | string | Function target folder (default is current directory) |  |
 | `-V`, `--version` | string | Language version (e.g., Python: 3.12.*, 3.11.*; Go: 1.21) | `3.12.*` |
 

@@ -35,7 +35,7 @@ deployments and when testing function changes, as it provides immediate feedback
 execution behavior.
 
 ```
-vastde logs tail [pipeline] [flags]
+vastde logs tail <pipeline> [flags]
 ```
 
 ## Examples
@@ -75,7 +75,7 @@ vastde logs tail [pipeline] [flags]
 | `-l`, `--limit` | int32 | Maximum number of log records to return per poll | `100` |
 | `--scope` | string | Filter logs by scope (user, runtime) | `user` |
 | `--severity` | string | Filter logs by severity (DEBUG, INFO, WARN, ERROR, CRITICAL) |  |
-| `-s`, `--since` | string | Filter logs since this time ago (e.g. '10m', '2h', '2025-04-21T10:00:00Z') |  |
+| `-s`, `--since` | string | Filter logs since this time ago (e.g. '10m', '2h', '2025-04-21T10:00:00Z') | `0s` |
 | `--span-id` | string | Filter logs by span ID |  |
 | `--trace-id` | string | Filter logs by trace ID |  |
 
