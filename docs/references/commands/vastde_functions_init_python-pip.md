@@ -24,7 +24,6 @@ vastde functions init python-pip [name]
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
 | `-H`, `--handlers` | string | Name of the handlers file (default is main.py) | `main.py` |
 | `-o`, `--output` | string | Output format: json|yaml|human | `human` |
-| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
 | `-t`, `--target` | string | The function target folder (default is current directory) |  |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
