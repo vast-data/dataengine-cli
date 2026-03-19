@@ -11,8 +11,10 @@ List VAST DataEngine topics
 
 List VAST DataEngine topics
 
+## Usage
+
 ```
-vastde topics list [flags]
+vastde topics list [options]
 ```
 
 ## Examples
@@ -29,9 +31,6 @@ vastde topics list [flags]
 
   # List topics as JSON
   vastde topics list --database-name kafka-db --output json
-
-  # List topics with cursor pagination
-  vastde topics list --database-name kafka-db --cursor <cursor-token>
 ```
 
 ## Options
@@ -49,7 +48,8 @@ vastde topics list [flags]
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
+| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
+| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also

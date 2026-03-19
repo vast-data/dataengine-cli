@@ -1,6 +1,6 @@
 # VAST DataEngine CLI
 
-Version: v5.4.1-dev.c0b8b3d5
+Version: v5.5.0-dev.4467acde
 
 > Command-line interface for managing and building applications on the VAST DataEngine platform.
 
@@ -25,7 +25,7 @@ Download the `vastde` binary for your platform from the [releases page][releases
 ### macOS (Apple Silicon)
 
 ```bash
-curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.4.1-dev.c0b8b3d5/vastde_darwin_arm64
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.4467acde/vastde_darwin_arm64
 chmod +x vastde
 sudo mv vastde /usr/local/bin
 ```
@@ -33,7 +33,7 @@ sudo mv vastde /usr/local/bin
 ### macOS (Intel)
 
 ```bash
-curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.4.1-dev.c0b8b3d5/vastde_darwin_amd64
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.4467acde/vastde_darwin_amd64
 chmod +x vastde
 sudo mv vastde /usr/local/bin
 ```
@@ -41,7 +41,7 @@ sudo mv vastde /usr/local/bin
 ### Linux (x86_64)
 
 ```bash
-curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.4.1-dev.c0b8b3d5/vastde_linux_amd64
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.4467acde/vastde_linux_amd64
 chmod +x vastde
 sudo mv vastde /usr/local/bin
 ```
@@ -49,14 +49,14 @@ sudo mv vastde /usr/local/bin
 ### Linux (ARM64)
 
 ```bash
-curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.4.1-dev.c0b8b3d5/vastde_linux_arm64
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.4467acde/vastde_linux_arm64
 chmod +x vastde
 sudo mv vastde /usr/local/bin
 ```
 
 ### Windows (x86_64)
 
-Download [vastde_windows_amd64.exe](https://github.com/vast-data/dataengine-cli/releases/download/v5.4.1-dev.c0b8b3d5/vastde_windows_amd64.exe) and add it to your PATH.
+Download [vastde_windows_amd64.exe](https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.4467acde/vastde_windows_amd64.exe) and add it to your PATH.
 
 ### Verify Installation
 
@@ -100,6 +100,7 @@ vastde functions --help
 - **`doc`** - Generate CLI documentation
 - **`functions`** - Manage VAST DataEngine functions
 - **`logs`** - View VAST DataEngine logs
+- **`metrics`** - View VAST DataEngine metrics
 - **`pipelines`** - Manage VAST DataEngine pipelines
 - **`setup-dataengine`** - Setup VAST DataEngine provisioning
 - **`topics`** - Manage VAST DataEngine topics
