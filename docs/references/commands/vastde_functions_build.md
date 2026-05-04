@@ -104,6 +104,7 @@ vastde functions build <name> [options]
 | `-T`, `--image-tag` | string | Image tag to apply | `latest` |
 | `-P`, `--pull-policy` | string | Builder image pull policy (never|always|ifnotpresent) | `ifnotpresent` |
 | `--push` | bool | Push the built image to the container registry |  |
+| `--save-build-log` | bool | Build with build log (default is false) |  |
 | `-t`, `--target` | string | Function target folder (default is current directory) |  |
 | `-V`, `--version` | string | Language version (e.g., Python: 3.12.*, 3.11.*; Go: 1.21) | `3.12.*` |
 
