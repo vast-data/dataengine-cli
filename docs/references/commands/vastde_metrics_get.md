@@ -54,7 +54,7 @@ vastde metrics get [options]
 | `-b`, `--bottom-k` | int | Return only the bottom K groups with lowest values (requires group-by, mutually exclusive with top-k) | `0` |
 | `-e`, `--end-time` | string | End time (ISO 3339/8601 format, e.g. 2021-01-01T00:00:00Z), mutually exclusive with timeframe |  |
 | `-f`, `--function` | string | Function name filter, optional |  |
-| `-g`, `--group-by` | string | Group metrics by dimension (function_name, pipeline_name), optional |  |
+| `-g`, `--group-by` | string | Group metrics by dimension (function_name, pipeline_name, function_deployment_name), optional |  |
 | `-n`, `--max-points` | int | Maximum data points to return (1-100) | `60` |
 | `-m`, `--metric-names` | string | Comma-separated list of metric names (1-10 metrics, e.g. "http_requests,memory_usage,dataengine.function.invocations"). Allows alphanumeric characters, dots, colons, and underscores. |  |
 | `-t`, `--metric-type` | string | Filter by metric type (Counter, Histogram, Gauge, UpDownCounter), optional |  |

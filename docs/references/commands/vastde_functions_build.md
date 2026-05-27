@@ -88,7 +88,7 @@ vastde functions build <name> [options]
     --target ./ml-service \
     --image-tag production-v2.0.0 \
     --version 3.12.*
-	
+
 	# Build and push the image to the container registry
   vastde functions build my-registry/my-function --image-tag v1.0.0 --push
 ```
