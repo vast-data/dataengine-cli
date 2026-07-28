@@ -20,8 +20,6 @@ If you provide a full image path (containing '/'), it will be used as-is.
 
 This is equivalent to running: vastde config set --builder-image-url <image-url>
 
-## Usage
-
 ```
 vastde builders set <image-url|tag>
 ```
@@ -47,8 +45,7 @@ vastde builders set <image-url|tag>
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
-| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
+| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also

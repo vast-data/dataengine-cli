@@ -28,17 +28,12 @@ for safe operation testing, verbose logging for debugging, and integrated teleme
 - [container-registries](vastde_container-registries.md) - Manage VAST DataEngine container registries
 - [doc](vastde_doc.md) - Generate CLI documentation
 - [functions](vastde_functions.md) - Manage VAST DataEngine functions
-- [install](vastde_install.md) - Install DataEngine on a Kubernetes cluster
 - [logs](vastde_logs.md) - View VAST DataEngine logs
-- [metrics](vastde_metrics.md) - View VAST DataEngine metrics
 - [pipelines](vastde_pipelines.md) - Manage VAST DataEngine pipelines
 - [setup-dataengine](vastde_setup-dataengine.md) - Setup VAST DataEngine provisioning
-- [status](vastde_status.md) - Get the status of a DataEngine release
 - [topics](vastde_topics.md) - Manage VAST DataEngine topics
 - [traces](vastde_traces.md) - View VAST DataEngine traces
 - [triggers](vastde_triggers.md) - Manage VAST DataEngine triggers
-- [uninstall](vastde_uninstall.md) - Uninstall DataEngine from a Kubernetes cluster
-- [upgrade](vastde_upgrade.md) - Upgrade DataEngine on a Kubernetes cluster
 - [version](vastde_version.md) - CLI version
 
 ## Options
@@ -48,7 +43,6 @@ for safe operation testing, verbose logging for debugging, and integrated teleme
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
-| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
+| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 

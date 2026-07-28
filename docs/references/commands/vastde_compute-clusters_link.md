@@ -32,10 +32,8 @@ Prerequisites:
 - Certificate files must have appropriate permissions for cluster access
 - Specified namespaces must exist in the cluster
 
-## Usage
-
 ```
-vastde compute-clusters link [options]
+vastde compute-clusters link [flags]
 ```
 
 ## Options
@@ -61,8 +59,7 @@ vastde compute-clusters link [options]
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
-| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
+| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also

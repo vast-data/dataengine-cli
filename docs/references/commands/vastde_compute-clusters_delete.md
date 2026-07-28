@@ -27,10 +27,8 @@ Use this command when decommissioning clusters or removing clusters that are no 
 needed for DataEngine workloads. The Kubernetes cluster itself remains intact and can be
 re-linked to DataEngine if needed later.
 
-## Usage
-
 ```
-vastde compute-clusters delete <GUID>|<name> [options]
+vastde compute-clusters delete [guid|name] [flags]
 ```
 
 ## Options
@@ -46,8 +44,7 @@ vastde compute-clusters delete <GUID>|<name> [options]
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
-| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
+| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also
