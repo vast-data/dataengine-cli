@@ -12,14 +12,17 @@ Get a VAST DataEngine topic details
 Get a VAST DataEngine topic details
 
 ```
-vastde topics get [guid|name] [flags]
+vastde topics get <GUID>|<name> [flags]
 ```
 
 ## Examples
 
 ```bash
-  # Get topic details (requires database name)
+  # Get topic details by name (requires database name)
   vastde topics get my-topic --database-name kafka-view1
+
+  # Get topic details by GUID
+  vastde topics get 5de842e9-5be0-4eb3-bb4b-6c5b8ba84806
 
   # Get topic details as JSON
   vastde topics get event-stream --database-name kafka-db --output json
@@ -34,7 +37,7 @@ vastde topics get [guid|name] [flags]
 
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
-| `--database-name` | string | Database name (required) |  |
+| `--database-name` | string | Database name (required for name-based lookup) |  |
 
 ### Global options
 
