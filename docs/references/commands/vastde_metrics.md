@@ -1,32 +1,20 @@
 ---
-title: vastde version
-description: CLI version
+title: vastde metrics
+description: View VAST DataEngine metrics
 ---
 
-# vastde version
+# vastde metrics
 
-CLI version
+View VAST DataEngine metrics
 
 ## Synopsis
 
-CLI version
+View VAST DataEngine metrics
 
-## Usage
+## Subcommands
 
-```
-vastde version
-```
-
-## Examples
-
-```bash
-  # Display CLI version
-  vastde version
-
-  # Use in scripts
-  VERSION=$(vastde version)
-  echo "Running CLI version: $VERSION"
-```
+- [get](vastde_metrics_get.md) - Get VAST DataEngine metrics
+- [names](vastde_metrics_names.md) - List available metric names
 
 ## Options
 

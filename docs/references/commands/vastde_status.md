@@ -1,33 +1,27 @@
 ---
-title: vastde doc
-description: Generate CLI documentation
+title: vastde status
+description: Get the status of a DataEngine release
 ---
 
-# vastde doc
+# vastde status
 
-Generate CLI documentation
+Get the status of a DataEngine release
 
 ## Synopsis
 
-Generate markdown documentation for all CLI commands.
+Get the status of a DataEngine release.
 
-This command generates LLM-friendly documentation for the VAST DataEngine CLI.
-The documentation is organized in a hierarchical structure under docs/references/commands/.
+The chart name is embedded in the CLI binary at build time.
+
+Examples:
+
+  Shows status of the DataEngine release: 
+    $ vastde status
 
 ## Usage
 
 ```
-vastde doc [options]
-```
-
-## Examples
-
-```bash
-  # Generate documentation in the default location (./docs)
-  vastde doc
-
-  # Generate documentation in a custom location
-  vastde doc --output-dir /path/to/docs
+vastde status [options]
 ```
 
 ## Options
@@ -36,7 +30,10 @@ vastde doc [options]
 
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
-| `--output-dir` | string | Output directory for generated documentation | `./docs` |
+| `--debug` | bool | Enable verbose Helm debug logging |  |
+| `--kubeconfig` | string | Path to the kubeconfig file (defaults to $KUBECONFIG or ~/.kube/config) |  |
+| `--namespace` | string | Target Kubernetes namespace | `vast-dataengine` |
+| `--release-name` | string | Helm release name | `vast-dataengine` |
 
 ### Global options
 

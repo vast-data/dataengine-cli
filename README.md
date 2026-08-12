@@ -1,6 +1,6 @@
 # VAST DataEngine CLI
 
-Version: v5.4.6
+Version: v5.5.0-dev.g1eee55cf
 
 > Command-line interface for managing and building applications on the VAST DataEngine platform.
 
@@ -25,7 +25,7 @@ Download the `vastde` binary for your platform from the [releases page][releases
 ### macOS (Apple Silicon)
 
 ```bash
-curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.4.6/vastde_darwin_arm64
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.g1eee55cf/vastde_darwin_arm64
 chmod +x vastde
 sudo mv vastde /usr/local/bin
 ```
@@ -33,7 +33,7 @@ sudo mv vastde /usr/local/bin
 ### macOS (Intel)
 
 ```bash
-curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.4.6/vastde_darwin_amd64
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.g1eee55cf/vastde_darwin_amd64
 chmod +x vastde
 sudo mv vastde /usr/local/bin
 ```
@@ -41,7 +41,7 @@ sudo mv vastde /usr/local/bin
 ### Linux (x86_64)
 
 ```bash
-curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.4.6/vastde_linux_amd64
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.g1eee55cf/vastde_linux_amd64
 chmod +x vastde
 sudo mv vastde /usr/local/bin
 ```
@@ -49,14 +49,14 @@ sudo mv vastde /usr/local/bin
 ### Linux (ARM64)
 
 ```bash
-curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.4.6/vastde_linux_arm64
+curl -fsSL -o vastde https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.g1eee55cf/vastde_linux_arm64
 chmod +x vastde
 sudo mv vastde /usr/local/bin
 ```
 
 ### Windows (x86_64)
 
-Download [vastde_windows_amd64.exe](https://github.com/vast-data/dataengine-cli/releases/download/v5.4.6/vastde_windows_amd64.exe) and add it to your PATH.
+Download [vastde_windows_amd64.exe](https://github.com/vast-data/dataengine-cli/releases/download/v5.5.0-dev.g1eee55cf/vastde_windows_amd64.exe) and add it to your PATH.
 
 ### Verify Installation
 
@@ -99,12 +99,17 @@ vastde functions --help
 - **`container-registries`** - Manage VAST DataEngine container registries
 - **`doc`** - Generate CLI documentation
 - **`functions`** - Manage VAST DataEngine functions
+- **`install`** - Install DataEngine on a Kubernetes cluster
 - **`logs`** - View VAST DataEngine logs
+- **`metrics`** - View VAST DataEngine metrics
 - **`pipelines`** - Manage VAST DataEngine pipelines
 - **`setup-dataengine`** - Setup VAST DataEngine provisioning
+- **`status`** - Get the status of a DataEngine release
 - **`topics`** - Manage VAST DataEngine topics
 - **`traces`** - View VAST DataEngine traces
 - **`triggers`** - Manage VAST DataEngine triggers
+- **`uninstall`** - Uninstall DataEngine from a Kubernetes cluster
+- **`upgrade`** - Upgrade DataEngine on a Kubernetes cluster
 - **`version`** - CLI version
 
 ### Command Reference
