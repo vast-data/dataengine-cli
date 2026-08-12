@@ -11,10 +11,8 @@ Create a VAST DataEngine trigger
 
 Create a VAST DataEngine trigger
 
-## Usage
-
 ```
-vastde triggers create [command] [options]
+vastde triggers create [flags]
 ```
 
 ## Examples
@@ -24,7 +22,7 @@ vastde triggers create [command] [options]
   vastde triggers create \
     --name image-processor-trigger \
     --type Element \
-    --event "ObjectCreated:*" \
+    --events vastdata.com:Element.ObjectCreated \
     --source-bucket my-bucket
 
   # Create trigger from YAML configuration file
@@ -34,29 +32,28 @@ vastde triggers create [command] [options]
   vastde triggers create \
     --name csv-processor-trigger \
     --type Element \
-    --event "ObjectCreated:*" \
+    --events vastdata.com:Element.ObjectCreated \
     --source-bucket data-bucket \
     --name-prefix "csv/"
 
-  # Create trigger with multiple events (using repeated flag)
+  # Create trigger with multiple events
   vastde triggers create \
     --name multi-event-trigger \
     --type Element \
-    --event "ObjectCreated:*" \
-    --event "ObjectRemoved:*" \
+    --events "vastdata.com:Element.ObjectCreated,vastdata.com:Element.ObjectDeleted" \
     --source-bucket my-bucket
 
-  # Create Schedule trigger for scheduled execution
+  # Create Cron trigger for scheduled execution
   vastde triggers create \
     --name daily-report-trigger \
-    --type Schedule \
+    --type Cron \
     --cron-schedule "0 2 * * *"
 
   # Create trigger with custom extensions
   vastde triggers create \
     --name advanced-trigger \
     --type Element \
-    --event "ObjectCreated:*" \
+    --events vastdata.com:Element.ObjectCreated \
     --source-bucket my-bucket \
     --custom-extension "key1=value1" \
     --custom-extension "key2=value2"
@@ -65,15 +62,10 @@ vastde triggers create [command] [options]
   vastde triggers create \
     --name test-trigger \
     --type Element \
-    --event "ObjectCreated:*" \
+    --events vastdata.com:Element.ObjectCreated \
     --source-bucket test-bucket \
     --dry-run
 ```
-
-## Subcommands
-
-- [element](vastde_triggers_create_element.md) - Create a new element trigger
-- [schedule](vastde_triggers_create_schedule.md) - Create a new schedule trigger
 
 ## Options
 
@@ -81,13 +73,13 @@ vastde triggers create [command] [options]
 
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
-| `--broker-name` | string | Broker name for an external event broker or bucket (view) name for a VAST event broker on the VAST Cluster. If omitted, the DataEngine default broker is used. |  |
-| `--broker-type` | string | Broker type (`external` or `internal` for a VAST event broker) |  |
-| `--broker-url` | string | URL to the broker (for external brokers) |  |
+| `--broker-name` | string | Broker name for external or Bucket (View) name for internal |  |
+| `--broker-type` | string | Broker type (External or Internal) |  |
+| `--broker-url` | string | URL to the broker (for External brokers) |  |
 | `--cron-schedule` | string | Cron schedule for schedule triggers (required for --type schedule) |  |
 | `--custom-extension` | stringArray | Custom extension as key=value or @file (repeatable, only flat key-value pairs allowed) |  |
 | `--description` | string | A description of the resource. (optional) |  |
-| `--event` | stringSlice | List of events for element triggers (can be repeated). Allowed: ObjectCreated:*, ObjectRemoved:*, ObjectTagging:Put, ObjectTagging:Delete |  |
+| `--events` | stringSlice | List of events (comma-separated or repeated, required for element triggers) |  |
 | `-f`, `--from-file` | string | Path to trigger config file (yaml|json) |  |
 | `-n`, `--name` | string | A name for the resource |  |
 | `--name-prefix` | string | Name filter prefix for element triggers |  |
@@ -104,8 +96,7 @@ vastde triggers create [command] [options]
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
-| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
+| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also

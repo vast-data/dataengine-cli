@@ -38,10 +38,8 @@ Prerequisites:
 - Registry must be accessible from the cluster network
 - Authentication credentials must have image pull permissions
 
-## Usage
-
 ```
-vastde container-registries link [options]
+vastde container-registries link [flags]
 ```
 
 ## Options
@@ -52,25 +50,24 @@ vastde container-registries link [options]
 |------|------|-------------|----------|
 | `--additional-clusters` | stringSlice | Additional Kubernetes cluster names or VRNs |  |
 | `--additional-namespaces` | stringSlice | Additional Kubernetes namespaces |  |
-| `--auth-type` | string | The type of authentication that DataEngine should use to pull function images during deployment. Supported values: `none`= no authentication required, `secret`=authenticate with a specified Kubernetes secret, `password`=authenticate with a secret generated from specified credentials. See also `--email`, `--password`, `--username`, `--secret`. | `none` |
-| `--description` | string | A description for the container registry resource |  |
-| `--email` | string | User email for authentication. Applicable and optional if `--auth-type`=`password` |  |
-| `-n`, `--name` | string | A name for the container registry resource |  |
-| `--password` | string | Password for authentication. Required if `--auth-type`=`password` |  |
-| `--primary-cluster` | string | The name or VRN of the main Kubernetes cluster that will pull images from the container registry |  |
+| `--auth-type` | string | Authentication type (none, secret, password) | `none` |
+| `--description` | string | A description of the resource (optional) |  |
+| `--email` | string | User email for authentication |  |
+| `-n`, `--name` | string | A name for the resource (required) |  |
+| `--password` | string | Password for authentication |  |
+| `--primary-cluster` | string | Primary Kubernetes cluster name or VRN |  |
 | `--primary-namespace` | string | Primary Kubernetes namespace |  |
-| `--secret` | string | An existing Kubernetes secret for authentication. Required if `--auth-type`=`secret` |  |
-| `--tags` | stringSlice | Custom tags to apply |  |
-| `--url` | string | The URL of the container registry endpoint |  |
-| `--username` | string | Username for authentication. Required if `--auth-type`=`password` |  |
+| `--secret` | string | Secret name for authentication |  |
+| `--tags` | stringSlice | Custom tags to apply (optional) |  |
+| `--url` | string | URL to the container registry (required) |  |
+| `--username` | string | Username for authentication |  |
 
 ### Global options
 
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
-| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
+| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also
