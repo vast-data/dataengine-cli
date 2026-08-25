@@ -15,7 +15,7 @@ This command displays all registered container registries that can be used for s
 accessing function images. Each entry shows the registry name, URL, authentication type,
 and cluster assignments.
 
-You can control the number of results with pagination parameters (--limit and --cursor).
+You can control the number of results with pagination parameters (--limit).
 The output can be formatted as human-readable tables, JSON, or YAML for integration with
 automation tools.
 
@@ -23,8 +23,10 @@ Container registries must be properly configured with authentication credentials
 to compute clusters before functions can pull images from them. Use this command to verify
 registry availability and identify which registries are ready for use.
 
+## Usage
+
 ```
-vastde container-registries list [flags]
+vastde container-registries list [options]
 ```
 
 ## Options
@@ -40,7 +42,8 @@ vastde container-registries list [flags]
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
+| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
+| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also

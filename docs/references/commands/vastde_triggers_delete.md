@@ -11,8 +11,10 @@ Delete a VAST DataEngine trigger
 
 Delete a VAST DataEngine trigger
 
+## Usage
+
 ```
-vastde triggers delete [guid|name] [flags]
+vastde triggers delete <GUID>|<name> [options]
 ```
 
 ## Examples
@@ -44,7 +46,8 @@ vastde triggers delete [guid|name] [flags]
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
+| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
+| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also

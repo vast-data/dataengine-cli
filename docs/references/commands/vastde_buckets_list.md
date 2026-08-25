@@ -21,8 +21,10 @@ can be formatted as human-readable tables, JSON, or YAML for programmatic proces
 S3-enabled views serve as data sources and sinks for DataEngine functions and pipelines, providing
 S3-compatible object storage access to your VAST data.
 
+## Usage
+
 ```
-vastde buckets list [flags]
+vastde buckets list [options]
 ```
 
 ## Examples
@@ -39,9 +41,6 @@ vastde buckets list [flags]
 
   # List buckets as JSON
   vastde buckets list --output json
-
-  # List buckets with cursor pagination
-  vastde buckets list --cursor <cursor-token>
 ```
 
 ## Options
@@ -58,7 +57,8 @@ vastde buckets list [flags]
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
+| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
+| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also

@@ -11,8 +11,10 @@ Update a VAST DataEngine trigger
 
 Update a VAST DataEngine trigger
 
+## Usage
+
 ```
-vastde triggers update [guid|name] [flags]
+vastde triggers update <GUID>|<name> [options]
 ```
 
 ## Examples
@@ -23,7 +25,8 @@ vastde triggers update [guid|name] [flags]
 
   # Update trigger events
   vastde triggers update image-trigger \
-    --events "vastdata.com:Element.ObjectCreated,vastdata.com:Element.ObjectModified"
+    --event "ObjectCreated:*" \
+    --event "ObjectRemoved:*"
 
   # Update Element trigger filters
   vastde triggers update csv-trigger \
@@ -58,7 +61,7 @@ vastde triggers update [guid|name] [flags]
 | `--cron-schedule` | string | Update cron schedule (Schedule triggers) |  |
 | `--custom-extension` | stringArray | Update custom extensions |  |
 | `--description` | string | Update trigger description |  |
-| `--events` | stringSlice | Update events list (Element triggers) |  |
+| `--event` | stringSlice | Update events list for element triggers (can be repeated). Allowed: ObjectCreated:*, ObjectRemoved:*, ObjectTagging:Put, ObjectTagging:Delete |  |
 | `-f`, `--from-file` | string | Path to trigger update config file |  |
 | `--name-prefix` | string | Update name filter prefix |  |
 | `--name-suffix` | string | Update name filter suffix |  |
@@ -73,7 +76,8 @@ vastde triggers update [guid|name] [flags]
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
+| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
+| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also

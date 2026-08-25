@@ -14,7 +14,7 @@ List all functions available in your VAST DataEngine environment.
 This command displays all registered functions that can be invoked or used in triggers and pipelines.
 Each entry shows the function name, GUID, image source, status, and key configuration details.
 
-You can filter results by function name (--name) and control pagination (--limit, --cursor).
+You can filter results by function name (--name) and control pagination (--limit).
 The output can be formatted as human-readable tables, JSON, or YAML for integration with
 automation tools or further processing.
 
@@ -28,8 +28,10 @@ The list includes:
 - Resource configuration
 - Creation date
 
+## Usage
+
 ```
-vastde functions list [flags]
+vastde functions list [options]
 ```
 
 ## Examples
@@ -43,9 +45,6 @@ vastde functions list [flags]
 
   # List functions with pagination (first 10 results)
   vastde functions list --limit 10
-
-  # List functions starting from a specific cursor position
-  vastde functions list --cursor <cursor-token>
 
   # List functions with JSON output for scripting
   vastde functions list --output json
@@ -71,7 +70,8 @@ vastde functions list [flags]
 | Flag | Type | Description | Default |
 |------|------|-------------|----------|
 | `--dry-run` | bool | Simulate the operation without making actual changes to the system |  |
-| `-o`, `--output` | string | Output format: json|yaml|human | `human` |
+| `-o`, `--output` | string | Output format: `json`, `yaml`, `human` | `human` |
+| `--silent` | bool | Suppress UI outputs, such as spinner and success messages |  |
 | `-v`, `--verbose` | int | Verbosity level (0-9): 0=standard, 1=verbose, 2=detailed, 3=extended, 4=debug, 5=trace | `0` |
 
 ## See Also
